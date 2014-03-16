@@ -1,3 +1,5 @@
 /usr/bin/xscreensaver -display :0.0 &
 
 xrdb -merge ~/.Xresources &
+
+fbpanel &
