@@ -1,4 +1,4 @@
-/usr/bin/xscreensaver -display :0.0 &
+/usr/bin/xscreensaver -no-splash &
 
 xrdb -merge ~/.Xresources &
 
