@@ -59,6 +59,9 @@ map ,T <Esc>:!prove -vl % \\|less<CR>
 " check perl syntax
 map ,c <Esc>:!perl -c %:t<CR>
 
+" debug macro
+iab dbg use Data::Dumper qw(Dumper);<CR>warn Dumper [];
+
 
 set wildmode=longest,list
 
