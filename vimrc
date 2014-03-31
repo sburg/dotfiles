@@ -62,6 +62,8 @@ map ,c <Esc>:!perl -c %:t<CR>
 " debug macro
 iab dbg use Data::Dumper qw(Dumper);<CR>warn Dumper [];
 
+" enable/disable relative line numbers
+map <F2> : set relativenumber!<CR>
 
 set wildmode=longest,list
 
