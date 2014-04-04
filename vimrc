@@ -52,18 +52,29 @@ set t_md=
 
 " ### Misc
 
+" comment/uncomment blocks of code
+vmap ,c :s/^/#/gi<Enter>
+vmap ,C :s/^#//gi<Enter>
+
 " start prove within vim
 map ,t <Esc>:!prove -vl %<CR>
 map ,T <Esc>:!prove -vl % \\|less<CR>
 
 " check perl syntax
-map ,c <Esc>:!perl -c %:t<CR>
+map ,s <Esc>:!perl -c %:t<CR>
 
 " debug macro
-iab dbg use Data::Dumper qw(Dumper);<CR>warn Dumper [];
+imap <F3> use Data::Dumper qw(Dumper);<CR>warn Dumper [];
 
 " enable/disable relative line numbers
 map <F2> : set relativenumber!<CR>
+
+" toggle paste mode
+set pastetoggle=<F8>
+
+" code skeletons for perl
+autocmd BufNewFile *.pm 0r ~/.vim/skeleton.pm
+autocmd BufNewFile *.pl 0r ~/.vim/skeleton.pl
 
 set wildmode=longest,list
 
