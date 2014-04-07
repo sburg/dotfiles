@@ -52,6 +52,9 @@ set t_md=
 
 " ### Misc
 
+" mute search highlighting
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 " comment/uncomment blocks of code
 vmap ,c :s/^/#/gi<Enter>
 vmap ,C :s/^#//gi<Enter>
