@@ -63,6 +63,9 @@ vmap ,C :s/^#//gi<Enter>
 map ,t <Esc>:!prove -vl %<CR>
 map ,T <Esc>:!prove -vl % \\|less<CR>
 
+" count matches of current search pattern
+map ,n :%s///gn<CR>
+
 " check perl syntax
 map ,s <Esc>:!perl -c %:t<CR>
 
