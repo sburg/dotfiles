@@ -78,6 +78,9 @@ map <F2> : set relativenumber!<CR>
 " toggle paste mode
 set pastetoggle=<F8>
 
+" call ctags
+nnoremap <F5> :!ctags -R<CR>
+
 " code skeletons for perl
 autocmd BufNewFile *.pm 0r ~/.vim/skeleton.pm
 autocmd BufNewFile *.pl 0r ~/.vim/skeleton.pl
