@@ -71,6 +71,7 @@ map ,s <Esc>:!perl -c %:t<CR>
 
 " debug macro
 imap <F3> use Data::Dumper qw(Dumper);<CR>warn Dumper [];
+imap DUMPER <ESC>^iwarn __PACKAGE__.':'.__LINE__.$".Data::Dumper->Dump([\<ESC>llyw$a], ['<ESC>pa']);<ESC>
 
 " enable/disable relative line numbers
 map <F2> : set relativenumber!<CR>
